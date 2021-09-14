@@ -31,7 +31,7 @@ public class UsuarioController {
 		return ResponseEntity.ok(usuarioService.listarUsuarios());
 	}
 				
-	@PostMapping
+	@PostMapping("/logar")
 	public ResponseEntity<UsuarioLogin> loginUsuario(@RequestBody Optional  <UsuarioLogin> usuarioLogin){
 			
 			return usuarioService.autenticarUsuario(usuarioLogin)

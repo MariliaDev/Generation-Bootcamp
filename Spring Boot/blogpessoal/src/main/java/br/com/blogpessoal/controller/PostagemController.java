@@ -44,7 +44,7 @@ public class PostagemController {
 			return ResponseEntity.notFound().build();
 		}
 		
-		@GetMapping("/{id}")
+		@GetMapping("id/{id}")
 		public ResponseEntity<Postagem> getById(@PathVariable long id) {
 			return postagemRepository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
